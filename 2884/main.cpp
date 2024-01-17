@@ -11,15 +11,20 @@ void Init()
 
 int main()
 {
-	int N;
-	cin>>N;
-	for(int i=1;i<=N;i++)
+	int H,M;
+	cin>>H>>M;
+
+	if(M>=45)
+		M-=45;
+	else if(M<45)
 	{
-		for(int j=0;j<N-i;j++)
-			cout<<' ';
-		for(int j=0;j<i;j++)
-			cout<<'*';
-		cout<<endl;
+		M+=15;
+		if(H==0)
+			H=23;
+		else
+			H--;
 	}
+	
+	cout<<H<<' '<<M<<endl;
 	return 0;
 }

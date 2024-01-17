@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 #define endl '\n'
 using namespace std;
 
@@ -11,14 +12,18 @@ void Init()
 
 int main()
 {
-	int N;
-	cin>>N;
-	for(int i=1;i<=N;i++)
+	int T;
+	int R;
+	string s;
+
+	cin>>T;
+	for(int i=0;i<T;i++)
 	{
-		for(int j=0;j<N-i;j++)
-			cout<<' ';
-		for(int j=0;j<i;j++)
-			cout<<'*';
+		cin>>R;
+		cin>>s;
+		for(int j=0;j<s.length();j++)
+			for(int k=0;k<R;k++)
+				cout<<s[j];
 		cout<<endl;
 	}
 	return 0;
