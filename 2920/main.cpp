@@ -4,33 +4,33 @@ using namespace std;
 
 void Init()
 {
- ios::sync_with_stdio(false);
- cin.tie(NULL);
- cout.tie(NULL);
+	ios::sync_with_stdio(false);
+	cin.tie(NULL);
+	cout.tie(NULL);
 }
 
 int main()
 {
 	int arr[8];
-	for(int i=0;i<8;i++)
-		cin>>arr[i];
+	for (int i = 0; i < 8; i++)
+		cin >> arr[i];
 
-	bool ch=false;
+	bool ch = false;
 	int i;
-	for(i=1;i<8;i++)
+	for (i = 1; i < 8; i++)
 	{
-		if(arr[i]==arr[i-1]+1)
-			ch=true;
-		else if(arr[i]==arr[i-1]-1)
-			ch=false;
+		if (arr[i] == arr[i - 1] + 1)
+			ch = true;
+		else if (arr[i] == arr[i - 1] - 1)
+			ch = false;
 		else
 			break;
 	}
-	if(i!=8)
-		cout<<"mixed"<<endl;
-	else if(!ch)
-		cout<<"descending"<<endl;
+	if (i != 8)
+		cout << "mixed" << endl;
+	else if (!ch)
+		cout << "descending" << endl;
 	else
-		cout<<"ascending"<<endl;
+		cout << "ascending" << endl;
 	return 0;
 }
