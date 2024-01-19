@@ -19,6 +19,11 @@ int main()
         cin >> h >> w >> n;
         int a = n / h;
         int b = n % h;
+        if (b == 0)
+        {
+            b = h;
+            a--;
+        }
 
         int sum = (a + 1);
         sum += (b * 100);
