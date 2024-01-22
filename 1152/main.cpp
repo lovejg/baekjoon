@@ -12,6 +12,7 @@ void Init() // 시간 단축
 
 int main()
 {
+    Init();
     int k = 0;
     char s[1000001];
     cin.getline(s, 1000001); // 공백 포함해야 하므로

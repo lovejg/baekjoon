@@ -12,6 +12,7 @@ void Init()
 
 int main()
 {
+    Init();
     queue<int> q;
     int N;
     cin >> N;

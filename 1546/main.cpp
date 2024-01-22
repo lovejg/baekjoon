@@ -12,6 +12,7 @@ void Init()
 
 int main()
 {
+	Init();
 	int N;
 	cin >> N;
 	int arr[1000];

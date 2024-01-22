@@ -12,6 +12,7 @@ void Init()
 
 int main()
 {
+	Init();
 	int A, B, C;
 	cin >> A >> B >> C;
 

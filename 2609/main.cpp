@@ -24,6 +24,7 @@ int LCM(int a, int b)
 
 int main()
 {
+	Init();
 	int a, b;
 	cin >> a >> b;
 	cout << GCD(a, b) << endl;

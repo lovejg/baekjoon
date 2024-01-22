@@ -11,6 +11,7 @@ void Init()
 
 int main()
 {
+    Init();
     int h, w, n;
     int T;
     cin >> T;

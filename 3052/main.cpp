@@ -11,6 +11,7 @@ void Init()
 
 int main()
 {
+	Init();
 	int a;
 	bool ch[42];
 

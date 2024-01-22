@@ -11,6 +11,7 @@ void Init()
 
 int main()
 {
+	Init();
 	int N;
 	cin >> N;
 	for (int i = 1; i <= N; i++)

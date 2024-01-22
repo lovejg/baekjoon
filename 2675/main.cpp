@@ -12,6 +12,7 @@ void Init()
 
 int main()
 {
+	Init();
 	int T;
 	int R;
 	string s;

@@ -12,6 +12,7 @@ void Init()
 
 int main()
 {
+	Init();
 	int arr[3];
 	while (1)
 	{

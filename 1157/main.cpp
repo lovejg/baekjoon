@@ -12,6 +12,7 @@ void Init()
 
 int main()
 {
+    Init();
     int al[25] = {
         0,
     };

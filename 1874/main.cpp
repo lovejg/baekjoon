@@ -13,6 +13,7 @@ void Init()
 
 int main()
 {
+    Init();
     stack<int> s;
     vector<char> v;
     int n;

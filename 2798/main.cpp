@@ -11,6 +11,7 @@ void Init()
 
 int main()
 {
+	Init();
 	int N, M;
 	cin >> N >> M;
 	int arr[100];

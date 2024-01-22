@@ -11,6 +11,7 @@ void Init()
 
 int main()
 {
+	Init();
 	int a[8];
 	for (int i = 0; i < 9; i++)
 		cin >> a[i];

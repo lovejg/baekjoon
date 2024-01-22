@@ -12,6 +12,7 @@ void Init()
 
 int main()
 {
+    Init();
     string s;
     cin >> s;
     int arr[26];

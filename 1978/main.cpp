@@ -11,6 +11,7 @@ void Init()
 
 int main()
 {
+    Init();
     int N;
     cin >> N;
     int count = 0;
