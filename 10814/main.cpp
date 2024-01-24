@@ -5,6 +5,10 @@
 #define endl '\n'
 using namespace std;
 
+// sort와 stable_sort의 차이
+// 기본적으로 algorithm의 sort는 quick sort로써, 기존의 순서를 보장하지 않는다
+// 그러나 stable_sort는 기존의 순서를 보장한다!
+
 void Init()
 {
     ios::sync_with_stdio(false);
