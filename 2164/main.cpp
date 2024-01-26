@@ -13,20 +13,19 @@ void Init()
 int main()
 {
     Init();
+    int n;
+    cin >> n;
     queue<int> q;
-    int N;
-    cin >> N;
-    for (int i = 1; i <= N; i++)
+
+    for (int i = 1; i <= n; i++)
         q.push(i);
-    while (!q.empty())
+
+    while (q.size() != 1)
     {
-        if (q.size() == 1)
-            break;
         q.pop();
-        int temp = q.front();
+        q.push(q.front());
         q.pop();
-        q.push(temp);
     }
-    cout << q.front() << endl; // rear 해도 상관없음(어차피 하나라서)
+    cout << q.front() << endl;
     return 0;
 }
