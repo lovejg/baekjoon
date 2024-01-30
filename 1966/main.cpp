@@ -1,4 +1,5 @@
 #include <iostream>
+#include <queue>
 #include <vector>
 #include <algorithm>
 #define endl '\n'
@@ -20,14 +21,40 @@ int main()
     {
         int n, m;
         cin >> n >> m;
+        queue<pair<int, int>> q;
         vector<int> v;
         for (int j = 0; j < n; j++)
         {
             int k;
             cin >> k;
             v.push_back(k);
+            q.push({j, k});
         }
-        stable_sort(v.begin(), v.end(), greater<>());
+        sort(v.begin(), v.end());
+
+        int count = 1;
+        while (1)
+        {
+            if (q.front().second < v[v.size() - 1])
+            {
+                q.push(q.front());
+                q.pop();
+            }
+            else
+            {
+                if (q.front().first == m)
+                {
+                    cout << count << endl;
+                    break;
+                }
+                else
+                {
+                    q.pop();
+                    v.pop_back();
+                    count++;
+                }
+            }
+        }
     }
     return 0;
 }

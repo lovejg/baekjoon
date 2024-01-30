@@ -14,21 +14,23 @@ void Init()
 int main()
 {
     Init();
-    stack<int> s;
-    vector<char> v;
     int n;
     cin >> n;
-    int input;
-    int count = 1;
+    stack<int> s;
+    vector<char> v;
+
+    bool ch = false;
+    int start = 1;
     for (int i = 0; i < n; i++)
     {
-        cin >> input;
-        while (count <= input)
+        int k;
+        cin >> k;
+        while (start <= k)
         {
-            s.push(count++);
+            s.push(start++);
             v.push_back('+');
         }
-        if (s.top() == input)
+        if (s.top() == k)
         {
             s.pop();
             v.push_back('-');
@@ -36,10 +38,13 @@ int main()
         else
         {
             cout << "NO" << endl;
-            return 0;
+            ch = true;
+            break;
         }
     }
-    for (int i = 0; i < v.size(); i++)
-        cout << v[i] << endl;
+
+    if (!ch)
+        for (int i = 0; i < v.size(); i++)
+            cout << v[i] << endl;
     return 0;
 }
