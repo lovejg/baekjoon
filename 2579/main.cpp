@@ -13,19 +13,21 @@ int main()
 {
     Init();
     int n;
-    cin >> n;
-    int arr[1000001];
+    cin>>n;
+    int arr[301];
+    for(int i=1;i<=n;i++)
+        cin>>arr[i];
 
-    arr[1]=0; // 초기값
+    int dp[301];
+    dp[0]=0;
+    dp[1]=arr[1];
+
     for(int i=2;i<=n;i++)
     {
-        arr[i]=arr[i-1]+1;
-        if(i%3==0)
-            arr[i]=min(arr[i/3]+1, arr[i]);
-        if(i%2==0)
-            arr[i]=min(arr[i/2]+1, arr[i]);
+        dp[i]=max(dp[i-1], dp[i-2]);   
+        dp[i]+=arr[i];
     }
 
-    cout<<arr[n]<<endl;
+    cout<<dp[n]<<endl;
     return 0;
 }
