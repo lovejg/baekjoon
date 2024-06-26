@@ -1,3 +1,5 @@
+- cpp 입력하면 cppinit(prefix) 뜨는데 그 때 tab 누르면 바로 snippet 나옴
+
 **다시 풀어야 될 것들**
 
 - 10250 ACM 호텔: 예외에 대한 고려
