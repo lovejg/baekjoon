@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <algorithm>
 #define endl '\n'
 using namespace std;
 
@@ -19,25 +20,27 @@ int main()
     vector<int> v;
     for (int i = 0; i < n; i++)
     {
-        int h;
-        cin >> h;
-        if (h <= k)
-            v.push_back(h);
+        int a;
+        cin >> a;
+        if (a > k) // 목표값보다 비싼 동전은 애초에 안넣기
+            continue;
+        v.push_back(a);
     }
 
-    int count = 0;
+    sort(v.begin(), v.end(), greater<int>()); // 내림차순 정렬(편의를 위한걸로 굳이 안해도 됨)
 
-    for (int i = v.size() - 1; i >= 0; i--)
+    int res = 0;
+    for (int i = 0; i < v.size(); i++)
     {
         while (k >= v[i])
         {
             k -= v[i];
-            count++;
+            res++;
         }
         if (k == 0)
             break;
     }
 
-    cout << count << endl;
+    cout << res << endl;
     return 0;
 }
