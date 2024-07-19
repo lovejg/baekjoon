@@ -25,10 +25,16 @@ int main()
         v.push_back(k);
     }
 
+    vector<int> sum;
+    sum.push_back(v[0]);
+    for (int i = 1; i < n; i++)
+        sum.push_back(sum[i - 1] + v[i]);
+
     for (int i = 0; i < m; i++)
     {
         int a, b;
         cin >> a >> b;
+        cout << sum[b - 1] - sum[a - 2] << endl;
     }
     return 0;
 }
