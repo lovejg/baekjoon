@@ -35,25 +35,15 @@ int main()
     sort(v.begin(), v.end(), comp); // 사용자 지정 함수로 sorting
 
     int res = 1;
-    int i = 0;
     int end = v[0].second;
 
-    while (1)
+    for (int i = 1; i < n; i++)
     {
-        int j;
-        // 다음 수업 찾기
-        for (j = i + 1; j < n; j++)
+        if (v[i].first >= end)
         {
-            if (v[j].second >= end && i != j)
-            {
-                i = j;
-                end = v[i].second;
-                res++;
-                break;
-            }
+            end = v[i].second;
+            res++;
         }
-        if (j == n - 1) // 더 이상 볼 수업 없음
-            break;
     }
 
     cout << res << endl;
