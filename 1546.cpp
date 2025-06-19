@@ -27,7 +27,7 @@ int main()
     for (int i = 0; i < n; i++)
         total += (double)arr[i] / m * 100.0; // 이 부분은 아래 주석 보자
 
-    cout << total / n << endl;
+    cout << total / n << endl; // double과의 연산이라 double로 자동 형변환!
 
     // 왜 어디서는 double로 안바꿔줌??? 예를 들어서 그 100.0 곱하는 부분에서의 m이나 마지막 출력할 때 n 같은거??
     // 왜냐면 int랑 double이랑 같이 연산되면, double로 자동 형변환이 되기 때문이다!! 이거는 기본 지식이니 꼭 알아둡시데이
