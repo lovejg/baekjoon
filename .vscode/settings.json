@@ -5,7 +5,8 @@
     "*.ndjson": "jsonl",
     "iostream": "cpp",
     "string": "cpp",
-    "string_view": "cpp"
+    "string_view": "cpp",
+    "ostream": "cpp"
   },
   "C_Cpp.errorSquiggles": "disabled"
 }
